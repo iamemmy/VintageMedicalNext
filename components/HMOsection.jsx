@@ -41,6 +41,9 @@ export default function HMOsection() {
             <Link
                 href={'/hmo'}
                 className="mt-4 inline-block rounded-md bg-brandcl01 px-6 py-3 text-sm font-medium text-white shadow-sm hover:bg-brandcl02 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="400"
             >
                 View HMOs
             </Link>
