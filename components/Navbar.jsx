@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -12,6 +12,18 @@ export default function Navbar() {
   const closeMenuOnBookApp = () => {
     setIsSidebarOpen(false);
   }
+
+  useEffect(() => {
+    if (isSidebarOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isSidebarOpen]);
 
   return (
     <header className="h-[80px] lg:h-[90px] bg-brandcl01 text-white pr-4 pl-0 lg:pl-4 py-4 lg:px-6 lg:py-2 shadow-md flex items-center justify-between">
@@ -52,7 +64,7 @@ export default function Navbar() {
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } lg:translate-x-0`}
       >
-        <ul className="flex flex-col lg:flex-row space-y-4 lg:space-y-0">
+        <ul className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 -mt-20 lg:mt-0">
           <li className="hover:bg-gray-300 lg:hover:bg-brandcl02 px-4 py-2 rounded-md cursor-pointer text-sm transition duration-300">
             <Link href="/" className="block w-full h-full">Home</Link>
           </li>

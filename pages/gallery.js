@@ -58,7 +58,7 @@ export default function Gallery() {
                                     alt="Selected Preview"
                                     width={800}
                                     height={600}
-                                    className="object-contain rounded-lg max-h-[70vh]"
+                                    className="object-contain rounded-lg max-h-[70vh] border border-white"
                                 />
                                 <button
                                     onClick={handleClosePreview}
