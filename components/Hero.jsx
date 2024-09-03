@@ -33,7 +33,7 @@ export default function Hero() {
             className="relative h-full flex items-center justify-center bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.imageUrl})` }}
           >
-            <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div className="absolute inset-0 bg-black bg-opacity-40"></div>
             <div className="relative z-10 text-center max-w-2xl mx-auto px-0">
               <p
                 className="text-white text-lg font-medium mb-4"
@@ -45,6 +45,7 @@ export default function Hero() {
               </p>
               <h4
                 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+                style={{ textShadow: "1px 1px 2px black" }}
                 data-aos="fade-up"
                 data-aos-duration="500"
                 data-aos-delay="500"

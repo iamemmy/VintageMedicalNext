@@ -24,7 +24,7 @@ export default function HMOsection() {
                 Vintage Medical Centre is honored to be HMO accredited, reflecting our dedication to delivering top-tier healthcare. We've partnered with the most reputable HMO providers to ensure quality care for all our patients.
             </p>
             <Link
-                href={'/'}
+                href={'/hmo'}
                 className="mt-4 inline-block rounded-md bg-brandcl01 px-6 py-3 text-sm font-medium text-white shadow-sm hover:bg-brandcl02 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
                 View HMOs

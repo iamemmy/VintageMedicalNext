@@ -9,6 +9,10 @@ export default function Navbar() {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const closeMenuOnBookApp = () => {
+    setIsSidebarOpen(false);
+  }
+
   return (
     <header className="h-[80px] lg:h-[90px] bg-brandcl01 text-white pr-4 pl-0 lg:pl-4 py-4 lg:px-6 lg:py-2 shadow-md flex items-center justify-between">
       <Link href="/" className="flex items-center">
@@ -56,19 +60,22 @@ export default function Navbar() {
             <Link href="/about" className="block w-full h-full">About</Link>
           </li>
           <li className="hover:bg-gray-300 lg:hover:bg-brandcl02 px-4 py-2 rounded-md cursor-pointer text-sm transition duration-300">
-            <Link href="/guide" className="block w-full h-full">Guide</Link>
+            <Link href="/services" className="block w-full h-full">Services</Link>
+          </li>
+          <li className="hover:bg-gray-300 lg:hover:bg-brandcl02 px-4 py-2 rounded-md cursor-pointer text-sm transition duration-300">
+            <Link href="/gallery" className="block w-full h-full">Gallery</Link>
           </li>
           <li className="hover:bg-gray-300 lg:hover:bg-brandcl02 px-4 py-2 rounded-md cursor-pointer text-sm transition duration-300">
             <Link href="/contact" className="block w-full h-full">Contact</Link>
           </li>
         </ul>
 
-        <Link href={'/dashboard'} className="mt-auto access-btn lg:hidden bg-brandcl01 text-white text-sm hover:bg-brandcl02 border border-indigo-200 px-4 py-2 rounded-md transition duration-300">
+        <Link href="#appointment-section" onClick={closeMenuOnBookApp} className="mt-auto access-btn lg:hidden bg-brandcl01 text-white text-sm hover:bg-brandcl02 border border-indigo-200 px-4 py-2 rounded-md transition duration-300">
             Book Appointment
         </Link>
       </aside>
 
-        <Link href="/dashboard" className="hidden lg:block bg-brandcl0101 text-white text-sm hover:bg-brandcl02 border border-indigo-200 px-4 py-2 rounded-md transition duration-300">
+        <Link href="#appointment-section" className="hidden lg:block bg-brandcl0101 text-white text-sm hover:bg-brandcl02 border border-indigo-200 px-4 py-2 rounded-md transition duration-300">
             Book Appointment
         </Link>
     </header>

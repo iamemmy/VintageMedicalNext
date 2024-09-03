@@ -1,8 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function Footer() {
+
+    const router = useRouter();
+    const isHomePage = router.pathname === '/';
+
     return (
         <footer className="bg-gray-900 text-gray-300 py-12">
             <div className="container mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -25,25 +30,35 @@ export default function Footer() {
                     <ul className="space-y-2 text-xs lg:text-sm">
                         <li><Link href="/services" className="hover:text-indigo-400">Our Services</Link></li>
                         <li><Link href="/about" className="hover:text-indigo-400">About Us</Link></li>
-                        <li><Link href="/appointments" className="hover:text-indigo-400">Book Appointment</Link></li>
-                        <li><Link href="/faqs" className="hover:text-indigo-400">FAQs</Link></li>
+                        {isHomePage && (
+                            <>
+                                <li>
+                                    <Link href="#appointment-section" className="hover:text-indigo-400">
+                                        Book Appointment
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="#faqs-section" className="hover:text-indigo-400">FAQs</Link>
+                                </li>
+                            </>
+                        )}
                     </ul>
                 </div>
 
                 <div>
                     <h3 className="text-base lg:text-lg font-semibold text-white mb-4">Contact Us</h3>
                     <ul className="space-y-2 text-xs lg:text-sm">
-                        <li>123 Medical Way, Lagos, NG</li>
-                        <li>Phone: +234 123 456 7890</li>
-                        <li>Email: info@vintagemedical.com</li>
+                        <li>Plot 3213, F Road Citec Mount Pleasant Estate</li>
+                        <li>Phone: +234(0)8098587274</li>
+                        <li>Email: info@vintagemedicalcentre.com</li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 className="text-base lg:text-lg font-semibold text-white mb-4">Information</h3>
                     <ul className="space-y-2 text-xs lg:text-sm">
-                        <li><Link href="/privacy" className="hover:text-indigo-400">Privacy Policy</Link></li>
-                        <li><Link href="/terms" className="hover:text-indigo-400">Terms & Conditions</Link></li>
+                        <li><Link href="/#" onClick={(e) => e.preventDefault()} className="hover:text-indigo-400">Privacy Policy</Link></li>
+                        <li><Link href="/#" onClick={(e) => e.preventDefault()} className="hover:text-indigo-400">Terms & Conditions</Link></li>
                         <li><Link href="/hmo" className="hover:text-indigo-400">HMO Accreditation</Link></li>
                     </ul>
                 </div>

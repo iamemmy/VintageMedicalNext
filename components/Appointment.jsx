@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Appointment() {
     return (
-        <div className="relative overflow-hidden bg-transparent">
+        <div id="appointment-section"  className="relative overflow-hidden bg-transparent">
             <svg
                 viewBox="0 0 1208 1024"
                 className="absolute -top-10 left-1/2 -z-10 h-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:-top-12 md:-top-20 lg:-top-12 xl:top-0 opacity-30"
@@ -37,7 +37,7 @@ export default function Appointment() {
                                             type="text"
                                             name="fullName"
                                             id="fullName"
-                                            className="block w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                            className="block w-full p-2 rounded-md border border-gray-100 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                         />
                                     </div>
                                 </div>
@@ -50,7 +50,7 @@ export default function Appointment() {
                                             type="tel"
                                             name="phone"
                                             id="phone"
-                                            className="block w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                            className="block w-full p-2 rounded-md border border-gray-100 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                         />
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@ export default function Appointment() {
                                         <select
                                             id="professional"
                                             name="professional"
-                                            className="block w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                            className="block w-full p-2 rounded-md border border-gray-100 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                         >
                                             <option value="general_practitioner">General Practitioner</option>
                                             <option value="gynaecologist">Gynaecologist</option>
@@ -82,7 +82,7 @@ export default function Appointment() {
                                             type="date"
                                             name="date"
                                             id="date"
-                                            className="block w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                            className="block w-full p-2 rounded-md border border-gray-100 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                         />
                                     </div>
                                 </div>
@@ -96,14 +96,14 @@ export default function Appointment() {
                                         name="message"
                                         id="message"
                                         rows="4"
-                                        className="block w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                        className="block w-full p-2 rounded-md border border-gray-100 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                     />
                                 </div>
                             </div>
                             <div>
                                 <button
                                     type="submit"
-                                    className="block w-full rounded-md bg-[#1700ad] px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    className="block w-full rounded-md bg-brandcl01 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-brandcl02 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 >
                                     Submit
                                 </button>

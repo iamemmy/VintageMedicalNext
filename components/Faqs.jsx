@@ -31,7 +31,7 @@ export default function FAQSection() {
     };
 
     return (
-        <div className="py-16 sm:py-24 bg-gray-50">
+        <div id='faqs-section' className="py-16 sm:py-24 bg-gray-50">
 
             <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl lg:text-3xl font-extrabold text-gray-900 mb-6 text-center">FAQs</h2>
