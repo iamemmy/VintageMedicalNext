@@ -1,7 +1,13 @@
-import { React } from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function HMOsection() {
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
 
   return (
     <div className="relative overflow-hidden py-16 sm:py-24 bg-transparent">
@@ -19,8 +25,17 @@ export default function HMOsection() {
         </svg>
 
         <div className="max-w-4xl mx-auto text-center p-6">
-            <h2 className="text-2xl lg:text-3xl font-extrabold text-gray-900 mb-6">We Are HMO Accredited</h2>
-            <p className="text-sm lg:text-base text-gray-700 mb-6 leading-6">
+            <h2 
+                className="text-2xl lg:text-3xl font-extrabold text-gray-900 mb-6"
+                data-aos="fade-up"
+                data-aos-duration="500"
+            >We Are HMO Accredited</h2>
+            <p 
+                className="text-sm lg:text-base text-gray-700 mb-6 leading-6"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-delay="200"
+            >
                 Vintage Medical Centre is honored to be HMO accredited, reflecting our dedication to delivering top-tier healthcare. We've partnered with the most reputable HMO providers to ensure quality care for all our patients.
             </p>
             <Link

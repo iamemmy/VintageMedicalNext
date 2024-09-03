@@ -9,9 +9,41 @@ import Appointment from '../components/Appointment';
 import Reviews from '../components/Reviews';
 import FAQSection from '../components/Faqs';
 import HMOsection from '../components/HMOsection';
-import Footer from '@/components/Footer';
+import Footer from '../components/Footer';
+import Spinner from '../components/Spinner';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    if (loading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = 'auto';
+    };
+  }, [loading]);
+
+  if (loading) {
+    return (
+      <>
+        <TopHeader />
+        <Navbar />
+        <Spinner />
+      </>
+    );
+  }
+
   return (
     <div>
       <TopHeader />

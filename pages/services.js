@@ -2,8 +2,15 @@ import TopHeader from '../components/TopHeader';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Services() {
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
     const services = [
         {
             title: 'General Consultation',
@@ -53,8 +60,19 @@ export default function Services() {
             <Navbar />
             <div className="bg-gray-50 py-16 px-6 sm:px-16">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-2xl lg:text-3xl font-extrabold text-center text-gray-900">Our Services</h2>
-                    <p className="text-sm lg:text-base mt-4 text-center text-gray-600">
+                    <h2
+                        className="text-2xl lg:text-3xl font-extrabold text-center text-gray-900"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                    >
+                        Our Services
+                    </h2>
+                    <p
+                        className="text-sm lg:text-base mt-4 text-center text-gray-600"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay="200"
+                    >
                         At Vintage Medical Centre, we offer a wide range of healthcare services to meet your needs.
                     </p>
                     <div className="mt-12 grid gap-4 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -62,6 +80,9 @@ export default function Services() {
                             <div
                                 key={index}
                                 className="flex flex-col items-center bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow duration-300 ease-in-out"
+                                data-aos="fade-up"
+                                data-aos-duration="500"
+                                data-aos-delay={index * 100}
                             >
                                 <div className="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center mb-4">
                                     <Image src={service.icon} height={200} width={200} alt={`${service.title} icon`} className="w-8 h-8" />
