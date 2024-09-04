@@ -1,22 +1,46 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import TopHeader from '../components/TopHeader';
+import Head from 'next/head';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ContactUs = () => {
 
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
     return (
         <div>
+            <Head>
+                <title>Contact | Vintage Medical Centre</title>
+            </Head>
             <TopHeader />
             <Navbar />
             <div className="relative bg-gray-100 py-16">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-                    <h2 className="text-2xl lg:text-3xl font-extrabold mb-6">Contact Us</h2>
-                    <p className="text-sm lg:text-base text-gray-700 mb-12">
+                    <h2 
+                        className="text-2xl lg:text-3xl font-extrabold mb-6"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                    >Contact Us</h2>
+                    <p 
+                        className="text-sm lg:text-base text-gray-700 mb-12"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay="200"
+                    >
                         We would love to hear from you. Please reach out to us through the contact form or visit us at our location.
                     </p>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div 
+                        className="grid grid-cols-1 md:grid-cols-2 gap-12"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay="400"
+                    >
                         <div className="flex flex-col">
                             <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
                             <form action="https://formsubmit.co/vintagemedical@gmail.com" method="POST" className="space-y-6">

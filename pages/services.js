@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Head from 'next/head';
 
 export default function Services() {
     useEffect(() => {
@@ -56,6 +57,9 @@ export default function Services() {
 
     return (
         <div>
+            <Head>
+                <title>Services | Vintage Medical Centre</title>
+            </Head>
             <TopHeader />
             <Navbar />
             <div className="bg-gray-50 py-16 px-6 sm:px-16">

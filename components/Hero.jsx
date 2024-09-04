@@ -3,14 +3,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 export default function Hero() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   const slides = [
     { imageUrl: '/img1.jpg', heading: 'Vintage Medical Centre', subheading: `Experience Healthcare at it's Best`},
@@ -37,18 +31,12 @@ export default function Hero() {
             <div className="relative z-10 text-center max-w-2xl mx-auto px-0">
               <p
                 className="text-white text-lg font-medium mb-4"
-                data-aos="fade-up"
-                data-aos-duration="500"
-                data-aos-delay="300"
               >
                 {slide.heading}
               </p>
               <h4
                 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
                 style={{ textShadow: "1px 1px 2px black" }}
-                data-aos="fade-up"
-                data-aos-duration="500"
-                data-aos-delay="500"
               >
                 {slide.subheading}
               </h4>

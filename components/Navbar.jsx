@@ -82,12 +82,12 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <Link href="#appointment-section" onClick={closeMenuOnBookApp} className="mt-auto access-btn lg:hidden bg-brandcl01 text-white text-sm hover:bg-brandcl02 border border-indigo-200 px-4 py-2 rounded-md transition duration-300">
+        <Link href="/appointment" onClick={closeMenuOnBookApp} className="mt-auto access-btn lg:hidden bg-brandcl01 text-white text-sm hover:bg-brandcl02 border border-indigo-200 px-4 py-2 rounded-md transition duration-300">
             Book Appointment
         </Link>
       </aside>
 
-        <Link href="#appointment-section" className="hidden lg:block bg-brandcl0101 text-white text-sm hover:bg-brandcl02 border border-indigo-200 px-4 py-2 rounded-md transition duration-300">
+        <Link href="/appointment" className="hidden lg:block bg-brandcl0101 text-white text-sm hover:bg-brandcl02 border border-indigo-200 px-4 py-2 rounded-md transition duration-300">
             Book Appointment
         </Link>
     </header>

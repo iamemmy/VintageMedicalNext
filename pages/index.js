@@ -12,6 +12,7 @@ import HMOsection from '../components/HMOsection';
 import Footer from '../components/Footer';
 import Spinner from '../components/Spinner';
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 export default function Home() {
 
@@ -46,6 +47,9 @@ export default function Home() {
 
   return (
     <div>
+      <Head>
+        <title>Home | Vintage Medical Centre</title>
+      </Head>
       <TopHeader />
       <Navbar />
       <Hero />

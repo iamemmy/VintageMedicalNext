@@ -30,17 +30,11 @@ export default function Footer() {
                     <ul className="space-y-2 text-xs lg:text-sm">
                         <li><Link href="/services" className="hover:text-indigo-400">Our Services</Link></li>
                         <li><Link href="/about" className="hover:text-indigo-400">About Us</Link></li>
+                        <li><Link href="/appointment" className="hover:text-indigo-400">Book Appointment</Link></li>
                         {isHomePage && (
-                            <>
-                                <li>
-                                    <Link href="#appointment-section" className="hover:text-indigo-400">
-                                        Book Appointment
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="#faqs-section" className="hover:text-indigo-400">FAQs</Link>
-                                </li>
-                            </>
+                            <li>
+                                <Link href="#faqs-section" className="hover:text-indigo-400">FAQs</Link>
+                            </li>
                         )}
                     </ul>
                 </div>

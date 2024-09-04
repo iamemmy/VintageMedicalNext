@@ -1,8 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import TopHeader from '../components/TopHeader';
+import Head from 'next/head';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const galleryImages = [
     { src: '/site1.png', alt: 'Gallery Image 1' },
@@ -18,6 +21,10 @@ const galleryImages = [
 export default function Gallery() {
     const [selectedImage, setSelectedImage] = useState(null);
 
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
     const handleImageClick = (src) => {
         setSelectedImage(src);
     };
@@ -28,15 +35,32 @@ export default function Gallery() {
 
     return (
         <div>
+            <Head>
+                <title>Gallery | Vintage Medical Centre</title>
+            </Head>
             <TopHeader />
             <Navbar />
             <div className="relative bg-gray-100 py-16">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-                    <h2 className="text-2xl lg:text-3xl font-extrabold mb-6">Gallery</h2>
-                    <p className="text-sm lg:text-base text-gray-700 mb-12">
+                    <h2 
+                        className="text-2xl lg:text-3xl font-extrabold mb-6"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                    >Gallery</h2>
+                    <p 
+                        className="text-sm lg:text-base text-gray-700 mb-12"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay="200"
+                    >
                         Explore our gallery to see a collection of moments and highlights.
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div 
+                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+                        data-aos="fade-up"
+                        data-aos-duration="500"
+                        data-aos-delay="400"
+                    >
                         {galleryImages.map((image, index) => (
                             <div key={index} className="relative group cursor-pointer h-[30vh]">
                                 <Image

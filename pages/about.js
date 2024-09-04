@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import TopHeader from '../components/TopHeader';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Head from 'next/head';
 
 export default function AboutUs() {
   useEffect(() => {
@@ -13,6 +14,9 @@ export default function AboutUs() {
 
   return (
     <div>
+      <Head>
+        <title>About | Vintage Medical Centre</title>
+      </Head>
       <TopHeader />
       <Navbar />
       <div className="bg-transparent">
