@@ -61,7 +61,7 @@ export default function Footer() {
             <div className="mt-12 border-t border-gray-700 pt-6 text-center text-sm">
                 <p className="mb-2 text-sm lg:text-base">&copy; 2024 Vintage Medical Centre. All rights reserved.</p>
                 <p>
-                    Designed by <Link href="https://coderevo.com" className="text-indigo-400 hover:text-indigo-600 text-sm lg:text-base">CodeRevo</Link>
+                    Designed by <Link href="https://www.instagram.com/coderevo" className="text-indigo-400 hover:text-indigo-600 text-sm lg:text-base">CodeRevo</Link>
                 </p>
             </div>
         </footer>
