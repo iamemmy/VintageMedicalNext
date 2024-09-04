@@ -4,22 +4,6 @@ import Footer from '../components/Footer';
 import TopHeader from '../components/TopHeader';
 
 const ContactUs = () => {
-    const [formState, setFormState] = useState({
-        name: '',
-        email: '',
-        message: '',
-    });
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormState({ ...formState, [name]: value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission logic
-        console.log('Form submitted:', formState);
-    };
 
     return (
         <div>
@@ -35,15 +19,13 @@ const ContactUs = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         <div className="flex flex-col">
                             <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
-                            <form onSubmit={handleSubmit} className="space-y-6">
+                            <form action="https://formsubmit.co/vintagemedical@gmail.com" method="POST" className="space-y-6">
                                 <div>
                                     <label htmlFor="name" className="block text-left text-sm font-medium text-gray-900">Name</label>
                                     <input
                                         type="text"
                                         id="name"
                                         name="name"
-                                        value={formState.name}
-                                        onChange={handleChange}
                                         className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-brandcl01 sm:text-sm"
                                         required
                                     />
@@ -54,8 +36,6 @@ const ContactUs = () => {
                                         type="email"
                                         id="email"
                                         name="email"
-                                        value={formState.email}
-                                        onChange={handleChange}
                                         className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-brandcl01 sm:text-sm"
                                         required
                                     />
@@ -65,8 +45,6 @@ const ContactUs = () => {
                                     <textarea
                                         id="message"
                                         name="message"
-                                        value={formState.message}
-                                        onChange={handleChange}
                                         className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-brandcl01 sm:text-sm"
                                         rows="4"
                                         required

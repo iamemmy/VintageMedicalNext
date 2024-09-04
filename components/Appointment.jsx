@@ -26,7 +26,7 @@ export default function Appointment() {
                     </div>
 
                     <div className="mt-12 lg:mt-0 w-full lg:w-1/3 bg-white p-8 rounded-3xl shadow-xl ring-1 ring-gray-900/10">
-                        <form className="mt-6 space-y-4">
+                        <form action="https://formsubmit.co/vintagemedical@gmail.com" method="POST" className="mt-6 space-y-4">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                                 <div>
                                     <label htmlFor="fullName" className="block text-sm font-medium leading-6 text-gray-900">
@@ -37,6 +37,7 @@ export default function Appointment() {
                                             type="text"
                                             name="fullName"
                                             id="fullName"
+                                            required
                                             className="block w-full p-2 rounded-md border border-gray-100 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                         />
                                     </div>
@@ -50,6 +51,7 @@ export default function Appointment() {
                                             type="tel"
                                             name="phone"
                                             id="phone"
+                                            required
                                             className="block w-full p-2 rounded-md border border-gray-100 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                         />
                                     </div>
