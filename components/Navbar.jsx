@@ -1,95 +1,175 @@
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import React, { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+  // Toggle function for the mobile menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const closeMenuOnBookApp = () => {
-    setIsSidebarOpen(false);
-  }
-
-  useEffect(() => {
-    if (isSidebarOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isSidebarOpen]);
-
   return (
-    <header className="h-[80px] lg:h-[90px] bg-brandcl01 text-white pr-4 pl-0 lg:pl-4 py-4 lg:px-6 lg:py-2 shadow-md flex items-center justify-between">
-      <Link href="/" className="flex items-center">
-        <Image
-          src="/vmc.png"
-          alt="vmc logo"
-          width={200}
-          height={200}
-          className="w-28 h-28 lg:w-32 lg:h-32 object-contain -ml-3 lg:ml-0"
-        />
-        <span className="text-base lg:text-xl font-semibold uppercase -ml-3 lg:ml-0">
-          Vintage Medical Centre
-        </span>
-      </Link>
-      <button
-        className="lg:hidden text-white"
-        onClick={toggleSidebar}
-        aria-label="Toggle Sidebar"
-      >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16m-7 6h7"
-          ></path>
-        </svg>
-      </button>
-      <aside
-        className={`z-50 h-[90vh] lg:h-auto fixed lg:relative lg:top-0 top-[80px] left-0 w-full lg:w-auto bg-gray-200 lg:bg-transparent text-gray-800 lg:text-white flex flex-col justify-center items-center lg:flex-row p-6 space-y-4 lg:space-y-0 lg:py-6 lg:px-6 transition-transform transform ${
-          isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-        } lg:translate-x-0`}
-      >
-        <ul className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 -mt-20 lg:mt-0">
-          <li className="hover:bg-gray-300 lg:hover:bg-brandcl02 px-4 py-2 rounded-md cursor-pointer text-sm transition duration-300">
-            <Link href="/" className="block w-full h-full">Home</Link>
-          </li>
-          <li className="hover:bg-gray-300 lg:hover:bg-brandcl02 px-4 py-2 rounded-md cursor-pointer text-sm transition duration-300">
-            <Link href="/about" className="block w-full h-full">About</Link>
-          </li>
-          <li className="hover:bg-gray-300 lg:hover:bg-brandcl02 px-4 py-2 rounded-md cursor-pointer text-sm transition duration-300">
-            <Link href="/services" className="block w-full h-full">Services</Link>
-          </li>
-          <li className="hover:bg-gray-300 lg:hover:bg-brandcl02 px-4 py-2 rounded-md cursor-pointer text-sm transition duration-300">
-            <Link href="/gallery" className="block w-full h-full">Gallery</Link>
-          </li>
-          <li className="hover:bg-gray-300 lg:hover:bg-brandcl02 px-4 py-2 rounded-md cursor-pointer text-sm transition duration-300">
-            <Link href="/contact" className="block w-full h-full">Contact</Link>
-          </li>
-        </ul>
+    <>
+      {/* Main Navigation Bar */}
+      <nav className="bg-white shadow-lg py-4 lg:py-6 px-6 md:px-12 rounded-lg">
+        <div className="container mx-auto flex justify-between items-center">
+          {/* Logo Section - Left Side */}
+          <Link href={"/"} className="flex items-center space-x-2">
+            <Image
+              src="/vmc-1.png"
+              alt="vmc logo"
+              width={200}
+              height={200}
+              className="w-10 lg:w-14 h-auto object-contain -ml-3 lg:ml-0"
+            />
+            <span className="text-lg md:text-2xl font-semibold text-gray-800">
+              Vintage Medical Centre
+            </span>
+          </Link>
 
-        <Link href="/appointment" onClick={closeMenuOnBookApp} className="mt-auto access-btn lg:hidden bg-brandcl01 text-white text-sm hover:bg-brandcl02 border border-indigo-200 px-4 py-2 rounded-md transition duration-300">
-            Book Appointment
-        </Link>
-      </aside>
+          {/* Main Navigation Items - Middle (Hidden on mobile) */}
+          <div className="hidden md:flex flex-1 justify-center space-x-8">
+            <Link
+              href="/"
+              className="text-gray-600 hover:text-brandcl01 transition-colors duration-300 font-medium"
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="text-gray-600 hover:text-brandcl01 transition-colors duration-300 font-medium"
+            >
+              About
+            </Link>
+            <Link
+              href="/services"
+              className="text-gray-600 hover:text-brandcl01 transition-colors duration-300 font-medium"
+            >
+              Services
+            </Link>
+            <Link
+              href="/gallery"
+              className="text-gray-600 hover:text-brandcl01 transition-colors duration-300 font-medium"
+            >
+              Gallery
+            </Link>
+            <Link
+              href="/contact"
+              className="text-gray-600 hover:text-brandcl01 transition-colors duration-300 font-medium"
+            >
+              Contact
+            </Link>
+          </div>
 
-        <Link href="/appointment" className="hidden lg:block bg-brandcl0101 text-white text-sm hover:bg-brandcl02 border border-indigo-200 px-4 py-2 rounded-md transition duration-300">
-            Book Appointment
-        </Link>
-    </header>
+          {/* "Book Appointment" Button - Right Side (Hidden on mobile) */}
+          <div className="hidden md:block">
+            <Link href={'/appointment'} className="block text-center w-[fit-content] bg-brandcl01 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition-colors duration-300 transform hover:scale-105 shadow-md">
+              Book Appointment
+            </Link>
+          </div>
+
+          {/* Hamburger Icon for Mobile Menu - Right Side */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-800 focus:outline-none"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Slide-Out Menu */}
+      <div
+        className={`fixed top-0 left-0 w-full h-full bg-white shadow-xl transition-transform duration-300 ease-in-out z-50 p-6 transform ${
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
+        } md:hidden`}
+      >
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-2xl font-semibold">Menu</h2>
+          {/* Close Button */}
+          <button
+            onClick={toggleMenu}
+            className="text-gray-800 focus:outline-none"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav className="flex flex-col space-y-4">
+          <Link
+            href="/"
+            onClick={toggleMenu}
+            className="text-gray-600 hover:text-blue-500 transition-colors duration-300 text-lg font-medium"
+          >
+            Home
+          </Link>
+          <Link
+            href="/about"
+            onClick={toggleMenu}
+            className="text-gray-600 hover:text-blue-500 transition-colors duration-300 text-lg font-medium"
+          >
+            About
+          </Link>
+          <Link
+            href="/services"
+            onClick={toggleMenu}
+            className="text-gray-600 hover:text-blue-500 transition-colors duration-300 text-lg font-medium"
+          >
+            Services
+          </Link>
+          <Link
+            href="/gallery"
+            onClick={toggleMenu}
+            className="text-gray-600 hover:text-blue-500 transition-colors duration-300 text-lg font-medium"
+          >
+            Gallery
+          </Link>
+          <Link
+            href="/contact"
+            onClick={toggleMenu}
+            className="text-gray-600 hover:text-blue-500 transition-colors duration-300 text-lg font-medium"
+          >
+            Contact
+          </Link>
+          <div className="pt-4">
+            <Link
+              href={'/appointment'}
+              className="w-full block text-center bg-brandcl01 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition-colors duration-300 transform hover:scale-105 shadow-md"
+            >
+              Book Appointment
+            </Link>
+          </div>
+        </nav>
+      </div>
+    </>
   );
 }
