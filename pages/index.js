@@ -48,7 +48,13 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Home | Vintage Medical Centre</title>
+        <title>
+          Vintage Medical Centre | Premium and Exclusive Healthcare Services
+        </title>
+        <meta
+          name="description"
+          content="Welcome to Vintage Medical Centre, where excellence meets care. We provide premium and exclusive healthcare services with personalized medical attention, advanced treatments, and state-of-the-art facilities. Trust our expert team to prioritize your well-being."
+        />
       </Head>
       <TopHeader />
       <Navbar />

@@ -15,12 +15,15 @@ export default function AboutUs() {
   return (
     <div>
       <Head>
-        <title>About | Vintage Medical Centre</title>
+        <title>About Us | Vintage Medical Centre</title>
+        <meta
+          name="description"
+          content="Learn about Vintage Medical Centre, where compassion and expertise converge. We are a trusted healthcare institution dedicated to providing exceptional medical care with innovation, skill, and a patient-centered approach."
+        />
       </Head>
       <TopHeader />
       <Navbar />
       <div className="bg-transparent">
-
         <div className="max-w-7xl mx-auto py-16 px-6 lg:px-8 text-center">
           <h1
             className="text-2xl lg:text-3xl font-extrabold text-gray-900"
@@ -35,12 +38,38 @@ export default function AboutUs() {
             data-aos-duration="500"
             data-aos-delay="200"
           >
-            Welcome to Vintage Medical Centre: Your Trusted Healthcare Destination in Abuja
-            located at Plot 3213, F Road Citec Mount Pleasant Estate, Mbora District, Abuja, Vintage Medical Centre stands as a beacon of exceptional healthcare services in the region. Our commitment to providing top-notch medical care, coupled with a patient-centric approach, sets us apart as a leading healthcare institution. Comprehensive Services for Holistic Care
-            Vintage Medical Centre offers a wide range of comprehensive healthcare services designed to address the diverse needs of our patients. From general consultations and preventive care to specialized treatments and surgical procedures, our team of experienced physicians and healthcare professionals are dedicated to ensuring your well-being. Patient-Centered Approach
-            At Vintage Medical Centre, we believe that healthcare is not just about treating ailments; it is about forging meaningful connections with our patients. We prioritize building trust through open communication, active listening, and involving patients in their healthcare decisions. Our compassionate and empathetic approach ensures that you feel valued, heard, and supported throughout your healthcare journey. State-of-the-Art Facilities and Technology
-            To deliver the highest standard of care, Vintage Medical Centre boasts state-of-the-art facilities and leverages advanced medical technology. Our modern diagnostic equipment enables accurate assessments, precise diagnoses, and efficient treatment planning. Additionally, our in-house pharmacy ensures convenient access to medications and expert guidance from our knowledgeable pharmacists. Visit Vintage Medical Center
-            We invite you to experience the exceptional care and personalized attention at Vintage Medical Centre. Whether you require routine check-ups, specialized care, or emergency medical services, our dedicated team is here to serve you. Schedule an appointment with us today and let us be your trusted partner on your path to optimal health and well-being.
+            Welcome to Vintage Medical Centre: Your Trusted Healthcare
+            Destination in Abuja located at Plot 3213, F Road Citec Mount
+            Pleasant Estate, Mbora District, Abuja, Vintage Medical Centre
+            stands as a beacon of exceptional healthcare services in the region.
+            Our commitment to providing top-notch medical care, coupled with a
+            patient-centric approach, sets us apart as a leading healthcare
+            institution. Comprehensive Services for Holistic Care Vintage
+            Medical Centre offers a wide range of comprehensive healthcare
+            services designed to address the diverse needs of our patients. From
+            general consultations and preventive care to specialized treatments
+            and surgical procedures, our team of experienced physicians and
+            healthcare professionals are dedicated to ensuring your well-being.
+            Patient-Centered Approach At Vintage Medical Centre, we believe that
+            healthcare is not just about treating ailments; it is about forging
+            meaningful connections with our patients. We prioritize building
+            trust through open communication, active listening, and involving
+            patients in their healthcare decisions. Our compassionate and
+            empathetic approach ensures that you feel valued, heard, and
+            supported throughout your healthcare journey. State-of-the-Art
+            Facilities and Technology To deliver the highest standard of care,
+            Vintage Medical Centre boasts state-of-the-art facilities and
+            leverages advanced medical technology. Our modern diagnostic
+            equipment enables accurate assessments, precise diagnoses, and
+            efficient treatment planning. Additionally, our in-house pharmacy
+            ensures convenient access to medications and expert guidance from
+            our knowledgeable pharmacists. Visit Vintage Medical Center We
+            invite you to experience the exceptional care and personalized
+            attention at Vintage Medical Centre. Whether you require routine
+            check-ups, specialized care, or emergency medical services, our
+            dedicated team is here to serve you. Schedule an appointment with us
+            today and let us be your trusted partner on your path to optimal
+            health and well-being.
           </p>
         </div>
 
@@ -49,7 +78,13 @@ export default function AboutUs() {
             viewBox="0 0 1208 1024"
             className="absolute -top-10 left-1/2 -z-10 h-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:-top-12 md:-top-20 lg:-top-12 xl:top-0 opacity-30"
           >
-            <ellipse cx={604} cy={512} rx={604} ry={512} fill="url(#blue-gradient)" />
+            <ellipse
+              cx={604}
+              cy={512}
+              rx={604}
+              ry={512}
+              fill="url(#blue-gradient)"
+            />
             <defs>
               <radialGradient id="blue-gradient">
                 <stop stopColor="#3730dd" />
@@ -73,7 +108,10 @@ export default function AboutUs() {
                   data-aos-duration="500"
                   data-aos-delay="200"
                 >
-                  Our goal is to deliver exceptional care, foster healing, and improve well-being by combining compassion, innovation, and excellence, ensuring every patient receives the highest standard of healthcare.
+                  Our goal is to deliver exceptional care, foster healing, and
+                  improve well-being by combining compassion, innovation, and
+                  excellence, ensuring every patient receives the highest
+                  standard of healthcare.
                 </p>
               </div>
             </div>
@@ -97,9 +135,12 @@ export default function AboutUs() {
                   data-aos-duration="500"
                   data-aos-delay="200"
                 >
-                  <h3 className="text-lg font-semibold text-gray-800">Compassion</h3>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    Compassion
+                  </h3>
                   <p className="mt-2 text-sm text-gray-600">
-                    We care deeply about our patients and treat them with the kindness and empathy they deserve.
+                    We care deeply about our patients and treat them with the
+                    kindness and empathy they deserve.
                   </p>
                 </div>
                 <div
@@ -108,9 +149,12 @@ export default function AboutUs() {
                   data-aos-duration="500"
                   data-aos-delay="400"
                 >
-                  <h3 className="text-lg font-semibold text-gray-800">Integrity</h3>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    Integrity
+                  </h3>
                   <p className="mt-2 text-sm text-gray-600">
-                    Honesty and transparency are at the core of our practice. We uphold the highest ethical standards.
+                    Honesty and transparency are at the core of our practice. We
+                    uphold the highest ethical standards.
                   </p>
                 </div>
                 <div
@@ -119,22 +163,31 @@ export default function AboutUs() {
                   data-aos-duration="500"
                   data-aos-delay="600"
                 >
-                  <h3 className="text-lg font-semibold text-gray-800">Excellence</h3>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    Excellence
+                  </h3>
                   <p className="mt-2 text-sm text-gray-600">
-                    We are committed to delivering top-notch healthcare services and continually improving our practices.
+                    We are committed to delivering top-notch healthcare services
+                    and continually improving our practices.
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div className="relative overflow-hidden py-16 sm:py-24 bg-transparent">
           <svg
             viewBox="0 0 1208 1024"
             className="absolute -top-10 left-1/2 -z-10 h-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:-top-12 md:-top-20 lg:-top-12 xl:top-0 opacity-30"
           >
-            <ellipse cx={604} cy={512} rx={604} ry={512} fill="url(#blue-gradient)" />
+            <ellipse
+              cx={604}
+              cy={512}
+              rx={604}
+              ry={512}
+              fill="url(#blue-gradient)"
+            />
             <defs>
               <radialGradient id="blue-gradient">
                 <stop stopColor="#3730dd" />
@@ -157,7 +210,9 @@ export default function AboutUs() {
                 data-aos-duration="500"
                 data-aos-delay="200"
               >
-                Get to know our Medical Director, a dedicated professional committed to providing exceptional healthcare services and leading our team with expertise and compassion.
+                Get to know our Medical Director, a dedicated professional
+                committed to providing exceptional healthcare services and
+                leading our team with expertise and compassion.
               </p>
               <Link
                 href="https://drive.google.com/file/d/1-B7uV5Jjpt2Rf8Gso_kHi1x5GXng12hd/view?usp=drivesdk"
