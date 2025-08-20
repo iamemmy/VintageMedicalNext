@@ -45,14 +45,14 @@ export default function Details() {
                         Vintage Medical Centre: Where compassion and expertise converge. We are a trusted healthcare institution dedicated to providing exceptional medical care. Our renowned team of professionals combines skill, innovation, and a patient-centered approach to deliver comprehensive services. Experience the difference of personalized, quality healthcare that puts your well-being first.
                     </p>
                     <Link
-                        href="tel:08098587274"
+                        href="/contact"
                         className="inline-block bg-brandcl01 text-white px-6 py-3 rounded-md text-center font-semibold hover:bg-brandcl02 transition-colors duration-300"
                         data-aos="fade-up"
                         data-aos-duration="500"
                         data-aos-delay="500"
                         data-aos-offset="50"
                     >
-                        Connect with Us
+                        Learn More
                     </Link>
                 </div>
             </div>
