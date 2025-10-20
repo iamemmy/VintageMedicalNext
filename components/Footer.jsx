@@ -105,7 +105,7 @@ export default function Footer() {
           <p>
             Designed by{" "}
             <Link
-              href="https://coderevo.netlify.app/"
+              href="https://www.coderevotech.com/"
               className="text-indigo-400 hover:text-indigo-600 text-sm lg:text-base"
             >
               CodeRevo
